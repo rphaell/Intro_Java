@@ -2,6 +2,7 @@
 package intro;
 
 // 2 - Referência as Bibliotecas
+import java.util.Scanner;
 
 // 3 - Classe
 public class Medidas {
@@ -11,26 +12,38 @@ public class Medidas {
     public static void main(String[] args) {
         // Condicional = verificar uma condição - fazer uma pergunta para uma pessoa, um hardware ou software
 
+        // Utilizar a classe Scanner do Java para ler a escolha do usuário no console
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("M E N U    DE   O P Ç Õ E S");
+        System.out.println("c - Calcular Area Modo Curto: ");
+        System.out.println("e - Calcular Area Modo Extenso: ");
+        System.out.println("i - If Simples: ");
+        System.out.println("Digite a opção desejada: ");
+        String opcao = scanner.next();
+
+
         // switch = selecionar o comportamento do programa conforme a escolha da pessoa ou do software
 
-        String opcao = "goiaba";
+        //String opcao = "goiaba";
 
         switch (opcao) {
-            case "ifSimples":
+            case "i":
+            case "I":
                 System.out.println("Você escolheu executar o método ifSimples");
                 ifSimples();
                 break;
-            case "curto":
+            case "c":
+            case "C":
                 System.out.println("Você escolheu executar o método calcularAreaModoCurto");
                 calcularAreaModoCurto();
                 break;
-            case "extenso":
+            case "e":
+            case "E":
                 System.out.println("Você escolheu executar o método calcularAreaModoExtenso");
                 calcularAreaModoExtenso();
                 break;
             default:
                 System.out.println("Você escolheu executar um método inexistente");
-                break;
             }
         }
 
@@ -41,8 +54,8 @@ public class Medidas {
         // if = se
         // else = senão
 
-        String modo = "extenso";
-        if (modo == "curto") {
+        String modo = "i";
+        if (modo == "i") {
             calcularAreaModoCurto();
         }
         else {
